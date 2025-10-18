@@ -2,6 +2,7 @@ import HeroSection from './components/HeroSection';
 import Produtos from './components/Produtos';
 import Agendar from './components/Agendar';
 import Footer from './components/Footer';
+import ScrollAnimation from './components/ScrollAnimation';
 import { GlobalStyle } from './styles/global.js';
 
 // 1. Importe as imagens que você vai usar
@@ -52,9 +53,15 @@ function App() {
     <>
       <GlobalStyle />
       <HeroSection />
-      <Produtos cards={cardsData} />
-      <Agendar />
-      <Footer />
+      <ScrollAnimation>
+        <Produtos cards={cardsData} />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Agendar />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Footer />
+      </ScrollAnimation>
     </>
   );
 }
