@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <ContactSection>
         <ContactButton
-          href="https://wa.me/556798765432"
+          href="https://wa.me/5567984684460"
           target="_blank"
           aria-label="Fale conosco pelo WhatsApp"
         >
@@ -24,9 +24,9 @@ const HeroSection = () => {
           <span>WhatsApp</span>
         </ContactButton>
 
-        <ContactButton href="tel:+556798765432" aria-label="Ligue para nós">
+        <ContactButton href="tel:+5567984684460" aria-label="Ligue para nós">
           <FaPhone color="var(--color-white)" />
-          <span>(67) 9876-5432</span>
+          <span>(67) 9 8468-4460</span>
         </ContactButton>
       </ContactSection>
     </Background>

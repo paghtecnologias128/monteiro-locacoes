@@ -10,7 +10,7 @@ const BookingSection = () => {
         treinados garantem segurança e diversão para você e seus convidados.
       </Paragraph>
       <Button
-        href="https://wa.me/556798765432?text=Olá! Quero agendar uma locação."
+        href="https://wa.me/5567984684460?text=Olá! Quero agendar uma locação."
         target="_blank"
         aria-label="Agendar agora pelo WhatsApp"
       >

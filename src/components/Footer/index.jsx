@@ -20,7 +20,7 @@ const Footer = () => {
             <li>
               <FaWhatsapp aria-hidden="true" />
               <a
-                href="https://wa.me/556798765432"
+                href="https://wa.me/5567984684460"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Fale conosco pelo WhatsApp"
@@ -30,8 +30,8 @@ const Footer = () => {
             </li>
             <li>
               <FaPhone aria-hidden="true" />
-              <a href="tel:+556798765432" aria-label="Ligue para nós">
-                (67) 9876-5432
+              <a href="tel:+5567984684460" aria-label="Ligue para nós">
+                (67) 98468-4460
               </a>
             </li>
             <li>
