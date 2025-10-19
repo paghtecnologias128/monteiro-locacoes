@@ -2,18 +2,17 @@ import styled from 'styled-components';
 
 export const ContainerCard = styled.div`
   background-color: #fff;
-  border: 1px solid var(--color-cyan);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #8FD1FF; /* Cor da borda: azul-claro #8FD1FF, Espessura: 2px, Estilo: sólido */
+  border-radius: 12px; /* Canto levemente arredondado */
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.12); /* Sombra leve */
   padding: 1rem;
   text-align: center;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.25s ease; /* Transição suave */
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-color: #5AB8FF; /* Escurecer a borda para #5AB8FF */
+    transform: translateY(-2px); /* Elevar levemente o card */
+    box-shadow: 0 10px 24px rgba(0, 123, 255, 0.18); /* Aumentar a sombra */
   }
 
   img {
