@@ -22,6 +22,10 @@ export const Background = styled.div`
     filter: brightness(0.5);
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    padding: 10px; /* Ajusta o padding para telas menores */
+  }
 `;
 
 export const Title = styled.h1`

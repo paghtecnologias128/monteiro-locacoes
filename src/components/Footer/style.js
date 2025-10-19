@@ -24,6 +24,10 @@ export const FooterContent = styled.div`
     flex-direction: column;
     gap: 3rem;
   }
+
+  @media (max-width: 480px) {
+    gap: 2rem; /* Further reduce gap on very small screens */
+  }
 `;
 
 export const Column = styled.div`

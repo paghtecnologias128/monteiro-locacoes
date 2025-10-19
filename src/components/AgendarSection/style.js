@@ -67,6 +67,11 @@ export const Button = styled.a`
   }
 
   svg {
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem; /* Ajustar conforme necessário */
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 20px; /* Padding menor para telas muito pequenas */
+    font-size: 14px; /* Tamanho de fonte menor */
   }
 `;
