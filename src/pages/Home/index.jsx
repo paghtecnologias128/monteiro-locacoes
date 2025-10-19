@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import HeroSection from '../../components/HeroSection';
 import ScrollAnimation from '../../components/ScrollAnimation';
+import Spinner from '../../components/Spinner';
 
 const Products = React.lazy(() => import('../../components/Products'));
 const BookingSection = React.lazy(() => import('../../components/BookingSection'));
@@ -12,17 +13,17 @@ function Home() {
   return (
     <>
       <HeroSection />
-      <Suspense fallback={<div>Carregando produtos...</div>}>
+      <Suspense fallback={<Spinner />}>
         <ScrollAnimation>
           <Products cards={cardsData} />
         </ScrollAnimation>
       </Suspense>
-      <Suspense fallback={<div>Carregando seção de agendamento...</div>}>
+      <Suspense fallback={<Spinner />}>
         <ScrollAnimation>
           <BookingSection />
         </ScrollAnimation>
       </Suspense>
-      <Suspense fallback={<div>Carregando rodapé...</div>}>
+      <Suspense fallback={<Spinner />}>
         <ScrollAnimation>
           <Footer />
         </ScrollAnimation>
