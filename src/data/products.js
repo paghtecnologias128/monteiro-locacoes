@@ -1,10 +1,10 @@
 // Importe as imagens PNG
-import barracaBolinha from '../assets/barraca_bolinha.png';
-import cadeiras from '../assets/cadeiras.png';
-import comboFesta from '../assets/combo_festa.png';
-import pinturaFacil from '../assets/pintura_facil.png';
-import piscinaBolinha from '../assets/piscina_bolinha.png';
-import pulaPula from '../assets/pula_pula.png';
+import barracaBolinha from '../assets/ball_tent.png';
+import cadeiras from '../assets/chairs.png';
+import comboFesta from '../assets/party_combo.png';
+import pinturaFacil from '../assets/face_painting.png';
+import piscinaBolinha from '../assets/ball_pit.png';
+import pulaPula from '../assets/bouncy_castle.png';
 
 export const cardsData = [
   {

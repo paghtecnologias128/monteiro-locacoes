@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BackgroundImage from '../../assets/img - header.png';
+import BackgroundImage from '../../assets/header_img.png';
 
 export const Background = styled.div`
   position: relative;

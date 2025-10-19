@@ -1,9 +1,9 @@
-import { AgendarSectionContainer, Title, Paragraph, Button } from './style';
+import { BookingSectionContainer, Title, Paragraph, Button } from './style';
 import { FaWhatsapp } from 'react-icons/fa';
 
-const AgendarSection = () => {
+const BookingSection = () => {
   return (
-    <AgendarSectionContainer>
+    <BookingSectionContainer>
       <Title>APROVEITE E AGENDE!</Title>
       <Paragraph>
         Valorizamos sua festa com o objetivo de tornar esse momento inesquecível. Monitores
@@ -17,8 +17,8 @@ const AgendarSection = () => {
         AGENDAR AGORA!
         <FaWhatsapp />
       </Button>
-    </AgendarSectionContainer>
+    </BookingSectionContainer>
   );
 };
 
-export default AgendarSection;
+export default BookingSection;

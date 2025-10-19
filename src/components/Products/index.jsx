@@ -1,7 +1,7 @@
 import { CatalogSection, TitleWrapper, Subtitle, Title, Grid } from './style';
 import Card from '../Card';
 
-const Produtos = ({ cards }) => {
+const Products = ({ cards }) => {
   return (
     <CatalogSection>
       <TitleWrapper>
@@ -17,4 +17,4 @@ const Produtos = ({ cards }) => {
   );
 };
 
-export default Produtos;
+export default Products;

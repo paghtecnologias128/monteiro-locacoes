@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AgendarSectionContainer = styled.section`
+export const BookingSectionContainer = styled.section`
   background-color: #00263c;
   color: #ffffff;
   padding: 48px 2rem;
