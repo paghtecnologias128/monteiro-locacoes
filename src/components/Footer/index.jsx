@@ -1,5 +1,5 @@
 import { FooterContainer, FooterContent, Column, LogoColumn, ContactColumn } from './style';
-import Logo from '../../assets/img - logo.svg';
+import Logo from '../../assets/img-logo.svg';
 import { FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa6';
 
