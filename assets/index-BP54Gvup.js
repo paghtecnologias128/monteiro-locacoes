@@ -1,4 +1,4 @@
-import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
+import{d as o,j as e,F as a}from"./index-BMSkPRjU.js";const t=o.section`
   background-color: #00263c;
   color: #ffffff;
   padding: 48px 2rem;
@@ -11,7 +11,7 @@ import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
   @media (max-width: 768px) {
     padding: 32px 1rem;
   }
-`,n=a.h2`
+`,n=o.h2`
   font-family: 'Montserrat', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 32px;
@@ -22,7 +22,7 @@ import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
   @media (max-width: 768px) {
     font-size: 26px;
   }
-`,r=a.p`
+`,r=o.p`
   font-family: 'Montserrat', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 18px;
@@ -33,7 +33,7 @@ import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
   @media (max-width: 768px) {
     font-size: 16px;
   }
-`,s=a.a`
+`,s=o.a`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -66,4 +66,4 @@ import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
     padding: 10px 20px; /* Padding menor para telas muito pequenas */
     font-size: 14px; /* Tamanho de fonte menor */
   }
-`,f=()=>e.jsxs(t,{children:[e.jsx(n,{children:"APROVEITE E AGENDE!"}),e.jsx(r,{children:"Valorizamos sua festa com o objetivo de tornar esse momento inesquecível. Monitores treinados garantem segurança e diversão para você e seus convidados."}),e.jsxs(s,{href:"https://wa.me/556798765432?text=Olá! Quero agendar uma locação.",target:"_blank","aria-label":"Agendar agora pelo WhatsApp",children:["AGENDAR AGORA!",e.jsx(o,{})]})]});export{f as default};
+`,f=()=>e.jsxs(t,{children:[e.jsx(n,{children:"APROVEITE E AGENDE!"}),e.jsx(r,{children:"Valorizamos sua festa com o objetivo de tornar esse momento inesquecível. Monitores treinados garantem segurança e diversão para você e seus convidados."}),e.jsxs(s,{href:"https://wa.me/5567984684460?text=Olá! Quero agendar uma locação.",target:"_blank","aria-label":"Agendar agora pelo WhatsApp",children:["AGENDAR AGORA!",e.jsx(a,{})]})]});export{f as default};
