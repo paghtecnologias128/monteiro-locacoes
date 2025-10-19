@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import BackgroundImage from "../../assets/img - header.png";
+import styled from 'styled-components';
+import BackgroundImage from '../../assets/img - header.png';
 
 export const Background = styled.div`
   position: relative;
@@ -77,7 +77,9 @@ export const ContactButton = styled.a`
   color: var(--color-white);
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
     background-color: var(--color-cyan);

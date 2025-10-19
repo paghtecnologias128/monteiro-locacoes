@@ -82,14 +82,17 @@ export const ContactColumn = styled(Column)`
       transition: color 0.3s ease;
     }
 
-    a, span {
+    a,
+    span {
       color: var(--color-white);
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     &:hover {
-      svg, a, span {
+      svg,
+      a,
+      span {
         color: var(--color-cyan);
       }
     }

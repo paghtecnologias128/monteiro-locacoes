@@ -1,4 +1,4 @@
-import { ContainerCard, Sizes } from "./style.js";
+import { ContainerCard, Sizes } from './style.js';
 
 const Card = ({ image, title, alt }) => {
   return (

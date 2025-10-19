@@ -18,11 +18,20 @@ const Footer = () => {
           <ul>
             <li>
               <FaWhatsapp />
-              <a href="https://wa.me/556798765432" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">WhatsApp</a>
+              <a
+                href="https://wa.me/556798765432"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Fale conosco pelo WhatsApp"
+              >
+                WhatsApp
+              </a>
             </li>
             <li>
               <FaPhone />
-              <a href="tel:+556798765432" aria-label="Ligue para nós">(67) 9876-5432</a>
+              <a href="tel:+556798765432" aria-label="Ligue para nós">
+                (67) 9876-5432
+              </a>
             </li>
             <li>
               <FaMapMarkerAlt />

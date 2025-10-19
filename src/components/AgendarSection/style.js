@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const AgendarSectionContainer = styled.section`
-  background-color: #00263C;
-  color: #FFFFFF;
+  background-color: #00263c;
+  color: #ffffff;
   padding: 48px 2rem;
   text-align: center;
   display: flex;
@@ -47,19 +47,22 @@ export const Button = styled.a`
   gap: 8px;
   padding: 12px 28px;
   background-color: transparent;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600; /* SemiBold */
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 
   &:hover {
-    background-color: #00BFFF;
-    color: #FFFFFF;
+    background-color: #00bfff;
+    color: #ffffff;
     transform: scale(1.05);
   }
 

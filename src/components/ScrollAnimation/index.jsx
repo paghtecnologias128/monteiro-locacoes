@@ -22,12 +22,7 @@ const ScrollAnimation = ({ children }) => {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={animationVariants}
-    >
+    <motion.div ref={ref} initial="hidden" animate={controls} variants={animationVariants}>
       {children}
     </motion.div>
   );
