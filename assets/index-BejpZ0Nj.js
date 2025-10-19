@@ -1,4 +1,4 @@
-import{d as o,j as r}from"./index-BMSkPRjU.js";const n=o.section`
+import{d as o,j as r}from"./index-Clc1BMil.js";const n=o.section`
   padding: 4rem 2rem;
   background-color: var(--color-background);
 
@@ -59,4 +59,4 @@ import{d as o,j as r}from"./index-BMSkPRjU.js";const n=o.section`
   margin-top: 0.5rem;
   text-transform: none;
   letter-spacing: normal;
-`,p=({image:a,title:e,alt:t})=>r.jsxs(m,{children:[r.jsx("img",{src:a,alt:t}),r.jsx("h2",{children:e}),r.jsx(c,{children:"Pequeno | Médio | Grande"})]}),f=({cards:a})=>r.jsxs(n,{children:[r.jsxs(i,{children:[r.jsx(s,{children:"Entrega e montagem garantida!"}),r.jsx(l,{children:"Nossos Brinquedos"})]}),r.jsx(d,{children:a.map(e=>r.jsx(p,{image:e.image,title:e.title,alt:e.alt},e.id))})]});export{f as default};
+`,p=({image:a,title:e,alt:t})=>r.jsxs(m,{children:[r.jsx("img",{src:a,alt:t,loading:"lazy"}),r.jsx("h2",{children:e}),r.jsx(c,{children:"Pequeno | Médio | Grande"})]}),g=({cards:a})=>r.jsxs(n,{children:[r.jsxs(i,{children:[r.jsx(s,{children:"Entrega e montagem garantida!"}),r.jsx(l,{children:"Nossos Brinquedos"})]}),r.jsx(d,{children:a.map(e=>r.jsx(p,{image:e.image,title:e.title,alt:e.alt},e.id))})]});export{g as default};
