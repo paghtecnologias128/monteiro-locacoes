@@ -1,7 +1,7 @@
 import { CatalogSection, TitleWrapper, Subtitle, Title, Grid } from './style';
 import Card from '../Card';
 
-const Catalog = ({ cards }) => {
+const Produtos = ({ cards }) => {
   return (
     <CatalogSection>
       <TitleWrapper>
@@ -14,7 +14,7 @@ const Catalog = ({ cards }) => {
             key={card.id}
             image={card.image}
             title={card.title}
-            sub_title={card.sub_title}
+            alt={card.alt}
           />
         ))}
       </Grid>
@@ -22,4 +22,4 @@ const Catalog = ({ cards }) => {
   );
 };
 
-export default Catalog;
+export default Produtos;

@@ -1,9 +1,12 @@
+import React, { Suspense } from 'react';
 import HeroSection from './components/HeroSection';
-import Produtos from './components/Produtos';
-import Agendar from './components/Agendar';
-import Footer from './components/Footer';
-import ScrollAnimation from './components/ScrollAnimation';
+import ScrollAnimation from './components/ScrollAnimation'; // Added import
 import { GlobalStyle } from './styles/global.js';
+
+// Lazy loaded components
+const Produtos = React.lazy(() => import('./components/Produtos'));
+const AgendarSection = React.lazy(() => import('./components/AgendarSection'));
+const Footer = React.lazy(() => import('./components/Footer'));
 
 // 1. Importe as imagens que você vai usar
 import barracaBolinha from './assets/barraca_bolinha.png';
@@ -20,31 +23,37 @@ const cardsData = [
     id: 1,
     image: piscinaBolinha,
     title: 'Piscina de Bolinhas',
+    alt: 'Piscina de Bolinhas colorida com escorregador.',
   },
   {
     id: 2,
     image: pulaPula,
     title: 'Pula-Pula',
+    alt: 'Pula-pula inflável com redes de proteção.',
   },
   {
     id: 3,
     image: barracaBolinha,
     title: 'Barra de Bolinhas',
+    alt: 'Barraca de bolinhas inflável com tema de circo.',
   },
   {
     id: 4,
     image: cadeiras,
     title: 'Mesas + Cadeiras',
+    alt: 'Conjunto de mesas e cadeiras de plástico brancas.',
   },
   {
     id: 5,
     image: pinturaFacil,
     title: 'Pintura Facial',
+    alt: 'Criança com o rosto pintado de borboleta.',
   },
   {
     id: 6,
     image: comboFesta,
     title: 'Combo Festa',
+    alt: 'Imagem com vários brinquedos de festa juntos.',
   },
 ];
 
@@ -53,15 +62,21 @@ function App() {
     <>
       <GlobalStyle />
       <HeroSection />
-      <ScrollAnimation>
-        <Produtos cards={cardsData} />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Agendar />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Footer />
-      </ScrollAnimation>
+      <Suspense fallback={<div>Carregando produtos...</div>}>
+        <ScrollAnimation>
+          <Produtos cards={cardsData} />
+        </ScrollAnimation>
+      </Suspense>
+      <Suspense fallback={<div>Carregando seção de agendamento...</div>}>
+        <ScrollAnimation>
+          <AgendarSection />
+        </ScrollAnimation>
+      </Suspense>
+      <Suspense fallback={<div>Carregando rodapé...</div>}>
+        <ScrollAnimation>
+          <Footer />
+        </ScrollAnimation>
+      </Suspense>
     </>
   );
 }

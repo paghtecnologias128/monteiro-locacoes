@@ -4,20 +4,35 @@ export const FooterContainer = styled.footer`
   background-color: var(--color-footer-background);
   color: var(--color-white);
   padding: 2rem 4rem;
+  display: grid;
+  place-items: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+`;
+
+export const FooterContent = styled.div`
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 3rem;
-    padding: 2rem 1rem;
   }
 `;
 
 export const Column = styled.div`
   text-align: center;
-  flex: 1;
+  width: 33%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   h3 {
     font-weight: 700;
@@ -35,16 +50,16 @@ export const Column = styled.div`
 `;
 
 export const LogoColumn = styled(Column)`
-  flex: 0.5;
-
   img {
     width: 150px;
     height: 150px;
+    display: block;
+    margin: 0 auto;
   }
 `;
 
 export const ContactColumn = styled(Column)`
-  text-align: left;
+  text-align: center;
 
   ul {
     list-style: none;
@@ -59,10 +74,11 @@ export const ContactColumn = styled(Column)`
     font-size: 1rem;
     text-transform: none;
     letter-spacing: normal;
+    justify-content: center;
 
     svg {
       color: var(--color-white);
-      font-size: 1.5rem;
+      font-size: 24px;
       transition: color 0.3s ease;
     }
 
