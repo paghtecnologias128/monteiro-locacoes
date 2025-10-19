@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
@@ -21,9 +21,11 @@ const ScrollAnimation = ({ children }) => {
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={animationVariants}>
-      {children}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div ref={ref} initial="hidden" animate={controls} variants={animationVariants}>
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 };
 

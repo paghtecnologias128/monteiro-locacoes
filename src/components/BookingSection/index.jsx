@@ -15,7 +15,7 @@ const BookingSection = () => {
         aria-label="Agendar agora pelo WhatsApp"
       >
         AGENDAR AGORA!
-        <FaWhatsapp />
+        <FaWhatsapp aria-hidden="true" />
       </Button>
     </BookingSectionContainer>
   );
