@@ -22,7 +22,7 @@ export const ContainerCard = styled.div`
     border-radius: 5px;
   }
 
-  h1 {
+  h2 {
     font-size: 1.5rem;
     color: var(--color-cyan);
     margin-top: 1rem;

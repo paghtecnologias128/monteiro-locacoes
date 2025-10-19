@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BackgroundImage from '../../assets/header_img.png';
 
-export const Background = styled.div`
+export const Background = styled.section`
   position: relative;
   height: 100vh;
   display: flex;
@@ -51,9 +51,6 @@ export const Paragraph = styled.div`
   align-items: center;
   gap: 8px;
   margin-top: 2rem;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50px;
   font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--color-white);
 
@@ -73,6 +70,8 @@ export const ContactSection = styled.div`
 export const ContactButton = styled.a`
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 200px;
   gap: 10px;
   padding: 12px 25px;
   background-color: transparent;
@@ -85,7 +84,8 @@ export const ContactButton = styled.a`
     background-color 0.3s ease,
     transform 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--color-cyan);
     border-color: var(--color-cyan);
     transform: scale(1.05);

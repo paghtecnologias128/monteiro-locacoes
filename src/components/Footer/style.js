@@ -93,7 +93,8 @@ export const ContactColumn = styled(Column)`
       transition: color 0.3s ease;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       svg,
       a,
       span {

@@ -1,6 +1,7 @@
 import { FooterContainer, FooterContent, Column, LogoColumn, ContactColumn } from './style';
 import Logo from '../../assets/img - logo.svg';
-import { FaWhatsapp, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           <h3>CONTATO</h3>
           <ul>
             <li>
-              <FaWhatsapp />
+              <FaWhatsapp aria-hidden="true" />
               <a
                 href="https://wa.me/556798765432"
                 target="_blank"
@@ -28,13 +29,13 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <FaPhone />
+              <FaPhone aria-hidden="true" />
               <a href="tel:+556798765432" aria-label="Ligue para nós">
                 (67) 9876-5432
               </a>
             </li>
             <li>
-              <FaMapMarkerAlt />
+              <FaMapMarkerAlt aria-hidden="true" />
               <span aria-label="Endereço da Monteiro Locações">R. Guarapuava, 850</span>
             </li>
           </ul>

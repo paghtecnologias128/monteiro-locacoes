@@ -10,7 +10,7 @@ const HeroSection = () => {
       <SubTitle>Alocações com qualidade e segurança</SubTitle>
 
       <Paragraph>
-        <GrLocation color="var(--color-yellow)" />
+        <GrLocation color="var(--color-yellow)" aria-hidden="true" />
         <span>Campo Grande - MS</span>
       </Paragraph>
 

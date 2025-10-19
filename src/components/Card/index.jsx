@@ -4,7 +4,7 @@ const Card = ({ image, title, alt }) => {
   return (
     <ContainerCard>
       <img src={image} alt={alt} />
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <Sizes>Pequeno | Médio | Grande</Sizes>
     </ContainerCard>
   );
