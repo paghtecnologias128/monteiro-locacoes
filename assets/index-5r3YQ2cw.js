@@ -1,4 +1,4 @@
-import{d as o,j as r}from"./index-Z1n7skph.js";const n=o.section`
+import{d as o,j as r}from"./index-2xL1cp_Q.js";const n=o.section`
   padding: 4rem 2rem;
   background-color: var(--color-background);
 

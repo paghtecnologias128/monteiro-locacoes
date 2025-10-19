@@ -1,4 +1,4 @@
-import{d as a,j as e,F as o}from"./index-Z1n7skph.js";const t=a.section`
+import{d as a,j as e,F as o}from"./index-2xL1cp_Q.js";const t=a.section`
   background-color: #00263c;
   color: #ffffff;
   padding: 48px 2rem;
