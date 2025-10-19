@@ -1,4 +1,4 @@
-import{d as a,j as e,F as o,a as t,b as n}from"./index-BPdhc4_6.js";const i=a.footer`
+import{d as a,j as e,F as o,a as t,b as n}from"./index-CuUX7gl-.js";const i=a.footer`
   background-color: var(--color-footer-background);
   color: var(--color-white);
   padding: 2rem 4rem;
@@ -92,4 +92,4 @@ import{d as a,j as e,F as o,a as t,b as n}from"./index-BPdhc4_6.js";const i=a.fo
       }
     }
   }
-`,d="/monteiro-locacoes/assets/img-logo-Cw4x-8Ai.svg",h=()=>e.jsx(i,{children:e.jsxs(s,{children:[e.jsxs(r,{children:[e.jsx("h3",{children:"QUEM SOMOS?"}),e.jsx("p",{children:"Somos uma empresa que realiza alocações e leva diversão para você."})]}),e.jsx(l,{children:e.jsx("img",{src:d,alt:"Monteiro Locações Logo"})}),e.jsxs(c,{children:[e.jsx("h3",{children:"CONTATO"}),e.jsxs("ul",{children:[e.jsxs("li",{children:[e.jsx(o,{"aria-hidden":"true"}),e.jsx("a",{href:"https://wa.me/5567984684460",target:"_blank",rel:"noopener noreferrer","aria-label":"Fale conosco pelo WhatsApp",children:"WhatsApp"})]}),e.jsxs("li",{children:[e.jsx(t,{"aria-hidden":"true"}),e.jsx("a",{href:"tel:+5567984684460","aria-label":"Ligue para nós",children:"(67) 98468-4460"})]}),e.jsxs("li",{children:[e.jsx(n,{"aria-hidden":"true"}),e.jsx("span",{"aria-label":"Endereço da Monteiro Locações",children:"R. Guarapuava, 850"})]})]})]})]})});export{h as default};
+`,d="/monteiro-locacoes/assets/img-logo-kqyIG0Y7.svg",h=()=>e.jsx(i,{children:e.jsxs(s,{children:[e.jsxs(r,{children:[e.jsx("h3",{children:"QUEM SOMOS?"}),e.jsx("p",{children:"Somos uma empresa que realiza alocações e leva diversão para você."})]}),e.jsx(l,{children:e.jsx("img",{src:d,alt:"Monteiro Locações Logo"})}),e.jsxs(c,{children:[e.jsx("h3",{children:"CONTATO"}),e.jsxs("ul",{children:[e.jsxs("li",{children:[e.jsx(o,{"aria-hidden":"true"}),e.jsx("a",{href:"https://wa.me/5567984684460",target:"_blank",rel:"noopener noreferrer","aria-label":"Fale conosco pelo WhatsApp",children:"WhatsApp"})]}),e.jsxs("li",{children:[e.jsx(t,{"aria-hidden":"true"}),e.jsx("a",{href:"tel:+5567984684460","aria-label":"Ligue para nós",children:"(67) 98468-4460"})]}),e.jsxs("li",{children:[e.jsx(n,{"aria-hidden":"true"}),e.jsx("span",{"aria-label":"Endereço da Monteiro Locações",children:"R. Guarapuava, 850"})]})]})]})]})});export{h as default};
