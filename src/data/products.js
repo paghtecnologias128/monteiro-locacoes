@@ -6,7 +6,6 @@ import pinturaFacil from '../assets/pintura_facil.png';
 import piscinaBolinha from '../assets/piscina_bolinha.png';
 import pulaPula from '../assets/pula_pula.png';
 
-// Lista (array) com os dados de cada card
 export const cardsData = [
   {
     id: 1,
