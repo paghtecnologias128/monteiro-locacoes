@@ -1,0 +1,108 @@
+
+{
+  "categorias": [
+    {
+      "id": "pula-pula",
+      "titulo": "Pula Pula",
+      "opcoes": ["4,27m", "3,5m", "2,44m", "1,40m"],
+      "imagens": [
+        "/images/pula-pula-pequeno-1.40m.jpg",
+        "/images/pula-pula-medio-2.44m.jpg",
+        "/images/pula-pula-grande-3.5m.jpg",
+        "/images/pula-pula-super-grande-4.27m.jpg"
+      ],
+      "descricao": "Camas elásticas com rede de proteção e montagem profissional.",
+      "icon": "🏀"
+    },
+    {
+      "id": "piscina-bolinha",
+      "titulo": "Piscina de Bolinha",
+      "opcoes": ["1x1", "2x2"],
+      "imagens": [
+        
+      ],
+      "descricao": "Estrutura segura e colorida, ideal para os pequenos.",
+      "icon": "🏊‍♀️"
+    },
+    {
+      "id": "escorregador",
+      "titulo": "Escorregador",
+      "opcoes": ["vermelho/azul", "amarelo", "rosa"],
+      "imagens": [
+       
+      ],
+      "descricao": "Escorregadores infantis com degraus antiderrapantes.",
+      "icon": "🛝"
+    },
+    {
+      "id": "gangorra",
+      "titulo": "Gangorra",
+      "opcoes": ["modelo 1", "modelo 2"],
+      "imagens": [
+        "https://images.pexels.com/photos/8613267/pexels-photo-8613267.jpeg"
+      ],
+      "descricao": "Gangorras estáveis e divertidas.",
+      "icon": "⚖️"
+    },
+    {
+      "id": "barraca-5x1",
+      "titulo": "Barraca de Bolinha 5x1",
+      "opcoes": ["5x1"],
+      "imagens": [
+        "https://images.pexels.com/photos/8613268/pexels-photo-8613268.jpeg"
+      ],
+      "descricao": "Circuito 5 em 1 com túneis e áreas de bolinhas.",
+      "icon": "🏰"
+    },
+    {
+      "id": "mesa-cadeira",
+      "titulo": "Conjunto Mesa + Cadeira",
+      "opcoes": ["1 jogo", "2 jogos", "3 jogos", "4 jogos", "5 jogos", "6 jogos", "7 jogos"],
+      "imagens": [
+        "https://images.pexels.com/photos/6114991/pexels-photo-6114991.jpeg"
+      ],
+      "descricao": "Mesas e cadeiras para conforto dos convidados.",
+      "icon": "🪑"
+    },
+    {
+      "id": "combos",
+      "titulo": "Combos e Mini-combos",
+      "combos": [
+        {
+          "nome": "Combo 1",
+          "descricao": "Pula Pula 2,44m + Piscina 1x1",
+          "imagens": [
+            "/images/pula-pula-3.jpg",
+            "https://images.pexels.com/photos/8613264/pexels-photo-8613264.jpeg"
+          ]
+        },
+        {
+          "nome": "Combo 2",
+          "descricao": "Pula Pula 3,05m + Piscina 2x2",
+          "imagens": [
+            "/images/pula-pula-2.jpg",
+            "https://images.pexels.com/photos/8613263/pexels-photo-8613263.jpeg"
+          ]
+        },
+        {
+          "nome": "Combo 3",
+          "descricao": "Pula Pula 3,05m + Escorregador + Gangorra",
+          "imagens": [
+            "/images/pula-pula-4.jpg",
+            "https://images.pexels.com/photos/8613265/pexels-photo-8613265.jpeg",
+            "https://images.pexels.com/photos/8613267/pexels-photo-8613267.jpeg"
+          ]
+        },
+        {
+          "nome": "Mini Combo 1",
+          "descricao": "Escorregador + Gangorra",
+          "imagens": [
+            "https://images.pexels.com/photos/8613265/pexels-photo-8613265.jpeg"
+          ]
+        }
+      ],
+      "descricao": "Opções completas para otimizar sua festa.",
+      "icon": "🎁"
+    }
+  ]
+}
