@@ -1,12 +1,11 @@
-import { CatalogSection, TitleWrapper, Subtitle, Title, Grid } from './style';
+import { CatalogSection, TitleWrapper, Title, Grid } from './style';
 import Card from '../Card';
 
 const Products = ({ cards }) => {
   return (
     <CatalogSection>
       <TitleWrapper>
-        <Subtitle>Entrega e montagem garantida!</Subtitle>
-        <Title>Nossos Brinquedos</Title>
+        <Title>Nossos serviços</Title>
       </TitleWrapper>
       <Grid>
         {cards.map((card) => (

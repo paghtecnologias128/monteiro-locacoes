@@ -61,7 +61,8 @@ export const Button = styled.a`
     transform 0.25s ease;
 
   &:hover {
-    background-color: #00bfff;
+    background-color: var(--color-green);
+    border-color: var(--color-green);
     color: #ffffff;
     transform: scale(1.05);
   }

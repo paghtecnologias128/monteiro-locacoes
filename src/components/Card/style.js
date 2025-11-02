@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerCard = styled.div`
   background-color: #fff;
   border: 2px solid #37b1f8; /* Cor da borda: azul-claro #37B1F8, Espessura: 2px, Estilo: sólido */
-  border-radius: 10px; /* Canto levemente arredondado */
+  border-radius: 30px; /* Canto levemente arredondado */
   box-shadow: 0 4px 8px 0 #37b1f859; /* Sombra azul especificada */
   padding: 1rem;
   text-align: center;
@@ -17,9 +17,9 @@ export const ContainerCard = styled.div`
 
   img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 25px;
   }
 
   h2 {

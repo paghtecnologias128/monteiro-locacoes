@@ -6,7 +6,10 @@ import { FaPhone } from 'react-icons/fa6';
 const HeroSection = () => {
   return (
     <Background>
-      <Title>Transforme sua festa em um parque de diversão!</Title>
+      <Title>
+        Transforme sua festa em <br />
+        um parque de diversão!
+      </Title>
       <SubTitle>Alocações com qualidade e segurança</SubTitle>
 
       <Paragraph>
@@ -19,6 +22,7 @@ const HeroSection = () => {
           href="https://wa.me/5567984684460"
           target="_blank"
           aria-label="Fale conosco pelo WhatsApp"
+          isWhatsapp
         >
           <FaWhatsapp color="var(--color-white)" />
           <span>WhatsApp</span>

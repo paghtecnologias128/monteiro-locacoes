@@ -69,37 +69,42 @@ export const ContactColumn = styled(Column)`
     list-style: none;
     padding: 0;
   }
+`;
 
-  li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    text-transform: none;
-    letter-spacing: normal;
-    justify-content: center;
+export const Li = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: normal;
+  justify-content: center;
 
-    svg {
-      color: var(--color-white);
-      font-size: 24px;
-      transition: color 0.3s ease;
-    }
+  svg {
+    color: var(--color-white);
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
 
+  a,
+  span {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg,
     a,
     span {
-      color: var(--color-white);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    &:hover,
-    &:focus-visible {
-      svg,
-      a,
-      span {
-        color: var(--color-cyan);
-      }
+      color: ${({ isWhatsapp, isLocation }) =>
+        isWhatsapp
+          ? 'var(--color-green)'
+          : isLocation
+            ? 'var(--color-yellow-lima)'
+            : 'var(--color-cyan)'};
     }
   }
 `;

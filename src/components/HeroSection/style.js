@@ -30,10 +30,15 @@ export const Background = styled.section`
 
 export const Title = styled.h1`
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-size: clamp(2.3rem, 7vw, 4rem);
   color: var(--color-white);
   font-weight: 700;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-top: 250px;
+
+  @media (max-width: 768px) {
+    margin-top: 100px;
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -50,7 +55,7 @@ export const Paragraph = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--color-white);
 
@@ -86,8 +91,9 @@ export const ContactButton = styled.a`
 
   &:hover,
   &:focus-visible {
-    background-color: var(--color-cyan);
-    border-color: var(--color-cyan);
+    background-color: ${({ isWhatsapp }) =>
+      isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)'};
+    border-color: ${({ isWhatsapp }) => (isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)')};
     transform: scale(1.05);
   }
 

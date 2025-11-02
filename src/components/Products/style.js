@@ -11,7 +11,7 @@ export const CatalogSection = styled.section`
 
 export const TitleWrapper = styled.div`
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const Subtitle = styled.p`

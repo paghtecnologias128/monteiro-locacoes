@@ -18,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     --color-yellow: #ffcc00;
     --color-white: #ffffff;
     --color-text: #333333;
+    --color-green: #25D366;
+    --color-yellow-lima: #fde910;
 
     /* Fontes */
     --font-display: 'Bungee Inline', sans-serif;
