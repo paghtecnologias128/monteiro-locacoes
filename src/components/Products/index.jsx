@@ -9,7 +9,13 @@ const Products = ({ cards }) => {
       </TitleWrapper>
       <Grid>
         {cards.map((card) => (
-          <Card key={card.id} image={card.image} title={card.title} alt={card.alt} />
+          <Card
+            key={card.id}
+            image={card.image}
+            title={card.title}
+            alt={card.alt}
+            description={card.description}
+          />
         ))}
       </Grid>
     </CatalogSection>

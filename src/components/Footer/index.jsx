@@ -9,7 +9,7 @@ const Footer = () => {
       <FooterContent>
         <Column>
           <h3>QUEM SOMOS?</h3>
-          <p>Somos uma empresa que realiza alocações e leva diversão para você.</p>
+          <p>Oferecemos brinquedos seguros e de alta qualidade para festas, garantindo a diversão das crianças e a tranquilidade dos pais.</p>
         </Column>
         <LogoColumn>
           <img src={Logo} alt="Monteiro Locações Logo" />
