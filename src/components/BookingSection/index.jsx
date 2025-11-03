@@ -77,7 +77,7 @@ const BookingSection = ({ selectedItems, onSend, onClear }) => {
             <FaWhatsapp />
             Enviar
           </Button>
-          <Button clear onClick={onClear}>
+          <Button $clear onClick={onClear}>
             Limpar
           </Button>
         </ButtonContainer>

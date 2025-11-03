@@ -1,29 +1,25 @@
-import ballTent from '../assets/ball_tent.png';
-import chairs from '../assets/chairs.png';
-import partyCombo from '../assets/party_combo.png';
-import facePainting from '../assets/face_painting.png';
-import ballPit from '../assets/ball_pit.png';
-import bouncyCastle from '../assets/bouncy_castle.png';
-
 export const items = [
   {
     id: 'piscinas-e-barracas',
     name: 'Piscinas e Barracas',
-    image: ballPit,
+    images: [
+      new URL('../assets/ball_pit.png', import.meta.url).href,
+      new URL('../assets/ball_tent.jpg', import.meta.url).href,
+    ],
     alt: 'Piscinas e Barracas',
     options: [{ label: '1x1m' }, { label: '2x2m' }, { label: '5x1m' }],
   },
   {
     id: 'pula-pula',
     name: 'Pula-Pula',
-    image: bouncyCastle,
+    images: [new URL('../assets/bouncy_castle.jpg', import.meta.url).href],
     alt: 'Pula-Pula',
     options: [{ label: '1,40m' }, { label: '2,44m' }, { label: '3,05m' }, { label: '4,27m' }],
   },
   {
     id: 'mesas-e-cadeiras',
     name: 'Mesas + Cadeiras',
-    image: chairs,
+    images: [new URL('../assets/chairs.png', import.meta.url).href],
     alt: 'Mesas + Cadeiras',
     options: [
       { label: '8 a 5 Jogos' },
@@ -35,7 +31,11 @@ export const items = [
   {
     id: 'escorregadores',
     name: 'Escorregadores',
-    image: partyCombo,
+    images: [
+      new URL('../assets/slide_blue.jpg', import.meta.url).href,
+      new URL('../assets/slide_pink.jpg', import.meta.url).href,
+      new URL('../assets/slide_yellow.jpg', import.meta.url).href,
+    ],
     alt: 'Escorregadores',
     options: [
       { label: 'Escorregador + Gangorra' },
@@ -47,7 +47,12 @@ export const items = [
   {
     id: 'inflaveis',
     name: 'Infláveis',
-    image: partyCombo,
+    images: [
+      new URL('../assets/bouncy_race.jpg', import.meta.url).href,
+      new URL('../assets/bouncy_slide.png', import.meta.url).href,
+      new URL('../assets/bouncy_soccer.jpg', import.meta.url).href,
+      new URL('../assets/bouncy_war.png', import.meta.url).href,
+    ],
     alt: 'Infláveis',
     options: [
       { label: 'Tobagã Pequeno' },
@@ -60,21 +65,21 @@ export const items = [
   {
     id: 'jogos-de-mesa',
     name: 'Jogos de Mesa',
-    image: bouncyCastle,
+    images: [new URL('../assets/bouncy_castle.jpg', import.meta.url).href],
     alt: 'Jogos de Mesa',
     options: [{ label: 'Fliperama' }, { label: 'Mesa de Sinuca' }, { label: 'Mesa de Ping Pong' }],
   },
   {
     id: 'carrinhos-e-barracas',
     name: 'Carrinhos e Barracas',
-    image: ballTent,
+    images: [new URL('../assets/ball_tent.jpg', import.meta.url).href],
     alt: 'Carrinhos e Barracas',
     options: [{ label: 'Algodão Doce' }, { label: 'Pipoca' }, { label: 'Picolé' }],
   },
   {
     id: 'servicos',
     name: 'Serviços',
-    image: facePainting,
+    images: [new URL('../assets/face_painting.jpg', import.meta.url).href],
     alt: 'Serviços',
     options: [
       { label: 'Pintura Facial' },
@@ -85,7 +90,7 @@ export const items = [
   {
     id: 'combo-festa',
     name: 'Combo Festa',
-    image: partyCombo,
+    images: [new URL('../assets/party_combo.jpg', import.meta.url).href],
     alt: 'Combo Festa',
     options: [
       { label: 'Piscina + Cama Elástica (P)' },

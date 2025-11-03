@@ -21,7 +21,6 @@ const Products = () => {
   const handleOptionClick = (itemId, option) => {
     setSelectedItems((prev) =>
       prev.map((item) =>
-        // Se o ID do item corresponder, atualize a variação e o preço
         item.id === itemId ? { ...item, variation: option.label, price: option.price } : item,
       ),
     );
@@ -35,6 +34,11 @@ const Products = () => {
     const itemsWithNoVariation = selectedItems.filter((item) => !item.variation);
     if (itemsWithNoVariation.length > 0) {
       alert('Por favor, selecione uma opção para todos os itens selecionados.');
+      return;
+    }
+
+    if (!location) {
+      alert('Por favor, informe o local do evento.');
       return;
     }
 
@@ -61,7 +65,7 @@ const Products = () => {
             <Card
               key={card.id}
               id={card.id}
-              image={card.image}
+              images={card.images}
               title={card.name}
               alt={card.alt}
               options={card.options}

@@ -86,10 +86,10 @@ export const Button = styled.button`
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background-color: ${({ clear }) => (clear ? 'transparent' : 'var(--color-green)')};
+  background-color: ${({ $clear }) => ($clear ? 'transparent' : 'var(--color-green)')};
   border: 2px solid var(--color-green);
   border-radius: 30px;
-  color: ${({ clear }) => (clear ? 'var(--color-green)' : '#fff')};
+  color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#fff')};
   font-family: 'Montserrat', sans-serif;
   font-weight: 600; /* SemiBold */
   font-size: 16px;
@@ -99,8 +99,8 @@ export const Button = styled.button`
   transition: all 0.25s ease;
 
   &:hover {
-    background-color: ${({ clear }) => (clear ? 'var(--color-green)' : '#218838')};
-    border-color: ${({ clear }) => (clear ? 'var(--color-green)' : '#1e7e34')};
+    background-color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#218838')};
+    border-color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#1e7e34')};
     color: #fff;
     transform: scale(1.05);
   }
