@@ -22,7 +22,7 @@ const HeroSection = () => {
           href="https://wa.me/5567984684460"
           target="_blank"
           aria-label="Fale conosco pelo WhatsApp"
-          isWhatsapp
+          $isWhatsapp
         >
           <FaWhatsapp color="var(--color-white)" />
           <span>WhatsApp</span>

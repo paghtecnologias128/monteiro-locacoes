@@ -17,7 +17,7 @@ const Footer = () => {
         <ContactColumn>
           <h3>CONTATO</h3>
           <ul>
-            <Li isWhatsapp>
+            <Li $isWhatsapp>
               <FaWhatsapp aria-hidden="true" />
               <a
                 href="https://wa.me/5567984684460"
@@ -34,7 +34,7 @@ const Footer = () => {
                 (67) 98468-4460
               </a>
             </Li>
-            <Li isLocation>
+            <Li $isLocation>
               <FaMapMarkerAlt aria-hidden="true" />
               <span aria-label="Endereço da Monteiro Locações">R. Guarapuava, 850</span>
             </Li>

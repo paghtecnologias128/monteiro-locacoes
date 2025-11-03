@@ -1,11 +1,38 @@
-import { ContainerCard, Sizes } from './style.js';
+import { ContainerCard, OptionsContainer, OptionButton } from './style.js';
 
-const Card = ({ image, title, alt, description }) => {
+const Card = ({
+  id,
+  image,
+  title,
+  alt,
+  options,
+  isSelected,
+  selectedOption,
+  onCardClick,
+  onOptionClick,
+}) => {
+  const handleOptionClick = (e, option) => {
+    e.stopPropagation();
+    onOptionClick(id, option);
+  };
+
   return (
-    <ContainerCard>
+    <ContainerCard isSelected={isSelected} onClick={() => onCardClick(id)}>
       <img src={image} alt={alt} loading="lazy" />
       <h2>{title}</h2>
-      <Sizes>{description}</Sizes>
+      {isSelected && (
+        <OptionsContainer>
+          {options.map((option) => (
+            <OptionButton
+              key={option.label}
+              isSelected={selectedOption?.label === option.label}
+              onClick={(e) => handleOptionClick(e, option)}
+            >
+              {option.label}
+            </OptionButton>
+          ))}
+        </OptionsContainer>
+      )}
     </ContainerCard>
   );
 };

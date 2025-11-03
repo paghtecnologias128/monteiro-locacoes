@@ -99,10 +99,10 @@ export const Li = styled.li`
     svg,
     a,
     span {
-      color: ${({ isWhatsapp, isLocation }) =>
-        isWhatsapp
+      color: ${({ $isWhatsapp, $isLocation }) =>
+        $isWhatsapp
           ? 'var(--color-green)'
-          : isLocation
+          : $isLocation
             ? 'var(--color-yellow-lima)'
             : 'var(--color-cyan)'};
     }
