@@ -90,9 +90,7 @@ const Products = () => {
     <>
       <CatalogSection>
         <TitleWrapper>
-          <Title>
-            Nossos <br /> serviços e brinquedos
-          </Title>
+          <Title> Nossos serviços</Title>
         </TitleWrapper>
         <Grid>
           {products.map((product) => (

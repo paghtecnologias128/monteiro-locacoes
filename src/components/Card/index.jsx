@@ -51,10 +51,18 @@ const Card = memo(
           </CarouselSlider>
           {images.length > 1 && (
             <>
-              <CarouselButton direction="prev" onClick={handlePrevImage} aria-label="Imagem anterior">
+              <CarouselButton
+                direction="prev"
+                onClick={handlePrevImage}
+                aria-label="Imagem anterior"
+              >
                 <FaChevronLeft />
               </CarouselButton>
-              <CarouselButton direction="next" onClick={handleNextImage} aria-label="Próxima imagem">
+              <CarouselButton
+                direction="next"
+                onClick={handleNextImage}
+                aria-label="Próxima imagem"
+              >
                 <FaChevronRight />
               </CarouselButton>
             </>

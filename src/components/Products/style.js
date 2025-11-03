@@ -14,14 +14,6 @@ export const TitleWrapper = styled.div`
   margin-bottom: 2rem;
 `;
 
-export const Subtitle = styled.p`
-  color: var(--color-yellow);
-  font-size: clamp(1rem, 4vw, 1.2rem);
-  font-family: var(--font-main);
-  text-transform: none;
-  letter-spacing: normal;
-`;
-
 export const Title = styled.h2`
   color: var(--color-cyan);
   font-size: clamp(2rem, 6vw, 3rem);

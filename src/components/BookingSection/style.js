@@ -22,26 +22,6 @@ export const ChipContainer = styled.div`
   gap: 0.5rem;
 `;
 
-export const Chip = styled.div`
-  background-color: var(--color-green);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-`;
-
-export const QuantityInput = styled.input`
-  width: 50px;
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  text-align: center;
-  font-size: 0.9rem;
-`;
-
 export const Form = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,9 +93,9 @@ export const Button = styled.button`
   gap: 8px;
   padding: 12px 28px;
   background-color: ${({ $clear }) => ($clear ? 'transparent' : 'var(--color-green)')};
-  border: 2px solid var(--color-green);
+  border: 2px solid ${({ $clear }) => ($clear ? 'var(--color-yellow)' : 'var(--color-green)')};
   border-radius: 30px;
-  color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#fff')};
+  color: ${({ $clear }) => ($clear ? 'var(--color-yellow)' : '#fff')};
   font-family: 'Montserrat', sans-serif;
   font-weight: 600; /* SemiBold */
   font-size: 16px;
@@ -125,8 +105,8 @@ export const Button = styled.button`
   transition: all 0.25s ease;
 
   &:hover {
-    background-color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#218838')};
-    border-color: ${({ $clear }) => ($clear ? 'var(--color-green)' : '#1e7e34')};
+    background-color: ${({ $clear }) => ($clear ? 'var(--color-yellow)' : '#218838')};
+    border-color: ${({ $clear }) => ($clear ? 'var(--color-yellow)' : '#1e7e34')};
     color: #fff;
     transform: scale(1.05);
   }

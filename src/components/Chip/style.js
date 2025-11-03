@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ChipContainer = styled.div`
-  background-color: var(--color-green);
+  background-color: var(--color-cyan);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 20px;

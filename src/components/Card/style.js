@@ -8,6 +8,10 @@ export const ContainerCard = styled.div`
   text-align: center;
   transition: all 0.25s ease;
 
+  h2 {
+    color: var(--color-cyan);
+  }
+
   ${({ $isSelected }) =>
     $isSelected &&
     css`
@@ -51,7 +55,9 @@ export const CarouselButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
   opacity: 0.9;
 
   &:hover {
@@ -78,9 +84,9 @@ export const OptionsContainer = styled.div`
 `;
 
 export const OptionButton = styled.button`
-  background-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-green)' : '#f0f0f0')};
+  background-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-cyan)' : '#f0f0f0')};
   color: ${({ $isSelected }) => ($isSelected ? '#fff' : '#333')};
-  border: 1px solid ${({ $isSelected }) => ($isSelected ? 'var(--color-green)' : '#ccc')};
+  border: 1px solid ${({ $isSelected }) => ($isSelected ? 'var(--color-cyan)' : '#ccc')};
   border-radius: 20px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -88,15 +94,7 @@ export const OptionButton = styled.button`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-green)' : '#e0e0e0')};
-    border-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-green)' : '#aaa')};
+    background-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-cyan)' : '#e0e0e0')};
+    border-color: ${({ $isSelected }) => ($isSelected ? 'var(--color-cyan)' : '#aaa')};
   }
-`;
-
-export const Sizes = styled.p`
-  font-size: 0.9rem;
-  color: var(--color-cyan);
-  margin-top: 0.5rem;
-  text-transform: none;
-  letter-spacing: normal;
 `;

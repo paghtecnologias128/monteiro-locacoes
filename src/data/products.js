@@ -68,9 +68,12 @@ export const items = [
     options: [
       { label: 'Tobagã Pequeno' },
       { label: 'Tobagã Médio' },
+      { label: 'Tobogã Grande' },
       { label: 'Corrida Maluca' },
       { label: 'Futebol de Sabão' },
       { label: 'Guerra de Cotonete' },
+      { label: 'Splash Slide' },
+      { label: 'Touro Mecânico' },
     ],
   },
   {
@@ -78,7 +81,13 @@ export const items = [
     name: 'Jogos de Mesa',
     images: [arcade, pingPongTable, poolTable],
     alt: 'Jogos de Mesa',
-    options: [{ label: 'Fliperama' }, { label: 'Mesa de Sinuca' }, { label: 'Mesa de Ping Pong' }],
+    options: [
+      { label: 'Fliperama' },
+      { label: 'Mesa de Sinuca' },
+      { label: 'Mesa de Ping Pong' },
+      { label: 'Pebolim' },
+      { label: 'Air Hockey' },
+    ],
   },
   {
     id: 'carrinhos-e-barracas',
@@ -104,9 +113,10 @@ export const items = [
     images: [partyCombo],
     alt: 'Combo Festa',
     options: [
-      { label: 'Piscina + Cama Elástica (P)' },
-      { label: 'Piscina + Cama Elástica (M)' },
-      { label: 'Piscina + Cama Elástica (G)' },
+      { label: 'Barraca 5x1+ Escorregador + Gangorra' },
+      { label: 'Piscina 1x1+ Escorregador + Gangorra' },
+      { label: 'Pula Pula 2,44m + Escorregador + Gangorra' },
+      { label: 'Pula Pula - Piscina 1x1 + 10 Jogos de mesa' },
     ],
   },
 ];

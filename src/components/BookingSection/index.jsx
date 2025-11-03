@@ -46,7 +46,7 @@ const BookingSection = ({ selectedItems, onSend, onClear, onQuantityChange }) =>
     return (
       <BookingSectionContainer role="region" aria-live="polite">
         <EmptyStateMessage>
-          Nenhum item selecionado. Clique em um card para começar a montar seu orçamento!
+          Nenhum item selecionado. Clique em um card e faça sua alocação!
         </EmptyStateMessage>
       </BookingSectionContainer>
     );
@@ -61,7 +61,9 @@ const BookingSection = ({ selectedItems, onSend, onClear, onQuantityChange }) =>
         ))}
       </ChipContainer>
       <Form aria-labelledby="form-title">
-        <h2 id="form-title" style={{ display: 'none' }}>Detalhes do Orçamento</h2>
+        <h2 id="form-title" style={{ display: 'none' }}>
+          Detalhes do Orçamento
+        </h2>
         <InputGroup>
           <Input
             type="datetime-local"
@@ -130,7 +132,11 @@ const BookingSection = ({ selectedItems, onSend, onClear, onQuantityChange }) =>
           />
         </InputGroup>
         <ButtonContainer>
-          <Button onClick={handleSend} disabled={isSending} aria-label="Enviar orçamento via WhatsApp">
+          <Button
+            onClick={handleSend}
+            disabled={isSending}
+            aria-label="Enviar orçamento via WhatsApp"
+          >
             {isSending ? (
               'Enviando...'
             ) : (
@@ -140,11 +146,15 @@ const BookingSection = ({ selectedItems, onSend, onClear, onQuantityChange }) =>
               </>
             )}
           </Button>
-          <Button $clear onClick={() => {
-            if (window.confirm('Tem certeza que deseja limpar todos os itens selecionados?')) {
-              onClear();
-            }
-          }} aria-label="Limpar seleção">
+          <Button
+            $clear
+            onClick={() => {
+              if (window.confirm('Tem certeza que deseja limpar todos os itens selecionados?')) {
+                onClear();
+              }
+            }}
+            aria-label="Limpar seleção"
+          >
             Limpar
           </Button>
         </ButtonContainer>
@@ -165,7 +175,7 @@ BookingSection.propTypes = {
       name: PropTypes.string.isRequired,
       variation: PropTypes.string,
       quantity: PropTypes.number.isRequired,
-    })
+    }),
   ).isRequired,
   onSend: PropTypes.func.isRequired,
   onClear: PropTypes.func.isRequired,
