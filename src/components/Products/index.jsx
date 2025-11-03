@@ -6,49 +6,81 @@ import { items as products } from '../../data/products';
 
 const Products = () => {
   const [selectedItems, setSelectedItems] = useState([]);
-  const [itemsWithNoVariationError, setItemsWithNoVariationError] = useState('');
 
-  const handleCardClick = useCallback((itemId) => {
-    setItemsWithNoVariationError('');
+  const handleCardClick = useCallback((productId) => {
     setSelectedItems((prev) => {
-      const isSelected = prev.some((item) => item.id === itemId);
-      if (isSelected) {
-        return prev.filter((item) => item.id !== itemId);
+      const productSelectedOptions = prev.filter((item) => item.productId === productId);
+      if (productSelectedOptions.length > 0) {
+        // If product has selected options, deselect all of them
+        return prev.filter((item) => item.productId !== productId);
+      } else {
+        // If product has no selected options, select the first one with quantity 1
+        const product = products.find((p) => p.id === productId);
+        if (product && product.options.length > 0) {
+          const firstOption = product.options[0];
+          const uniqueItemId = `${productId}-${firstOption.label}`;
+          return [
+            ...prev,
+            {
+              id: uniqueItemId,
+              productId: productId,
+              name: product.name,
+              variation: firstOption.label,
+              quantity: 1,
+            },
+          ];
+        }
       }
-      const product = products.find((p) => p.id === itemId);
-      return [...prev, { id: itemId, name: product.name, variation: null, price: null }];
+      return prev;
     });
   }, []);
 
-  const handleOptionClick = useCallback((itemId, option) => {
-    setItemsWithNoVariationError('');
+  const handleOptionClick = useCallback((productId, option) => {
+    setSelectedItems((prev) => {
+      const uniqueItemId = `${productId}-${option.label}`;
+      const existingItemIndex = prev.findIndex((item) => item.id === uniqueItemId);
+
+      if (existingItemIndex !== -1) {
+        // If already selected, remove it
+        return prev.filter((item) => item.id !== uniqueItemId);
+      } else {
+        // If not selected, add it with default quantity 1
+        const product = products.find((p) => p.id === productId);
+        return [
+          ...prev,
+          {
+            id: uniqueItemId,
+            productId: productId,
+            name: product.name,
+            variation: option.label,
+            quantity: 1,
+          },
+        ];
+      }
+    });
+  }, []);
+
+  const handleQuantityChange = useCallback((itemId, newQuantity) => {
     setSelectedItems((prev) =>
-      prev.map((item) =>
-        item.id === itemId ? { ...item, variation: option.label, price: option.price } : item
-      )
+      prev.map((item) => (item.id === itemId ? { ...item, quantity: newQuantity } : item)),
     );
   }, []);
 
   const handleClear = () => {
     setSelectedItems([]);
-    setItemsWithNoVariationError('');
   };
 
-  const handleSend = ({ dateTime, location, observations }) => {
-    const itemsWithNoVariation = selectedItems.filter((item) => !item.variation);
-    if (itemsWithNoVariation.length > 0) {
-      setItemsWithNoVariationError('Por favor, selecione uma opção para todos os itens selecionados.');
-      return;
-    }
-
-    if (!location) {
-      // This validation is now handled in BookingSection
+  const handleSend = ({ dateTime, cep, location, number, complement, observations }) => {
+    if (selectedItems.length === 0) {
+      alert('Por favor, selecione pelo menos um item.');
       return;
     }
 
     const message = `Olá! Quero orçamento para:\n\n${selectedItems
-      .map((item) => `1. ${item.name} - ${item.variation}`)
-      .join('\n')}\n\nData e horário: ${dateTime}\nLocal do evento: ${location}\nObservações: ${observations}`;
+      .map((item) => `${item.quantity}x ${item.name} - ${item.variation}`)
+      .join(
+        '\n',
+      )}\n\nData e horário: ${dateTime}\nCEP: ${cep}\nLocal do evento: ${location}, ${number} ${complement ? `- ${complement}` : ''}\nObservações: ${observations}`;
 
     const whatsappUrl = `https://wa.me/5567984684460?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -63,17 +95,16 @@ const Products = () => {
           </Title>
         </TitleWrapper>
         <Grid>
-          {products.map((card) => (
+          {products.map((product) => (
             <Card
-              key={card.id}
-              id={card.id}
-              images={card.images}
-              title={card.name}
-              alt={card.alt}
-              options={card.options}
-              isSelected={selectedItems.some((item) => item.id === card.id)}
-              selectedOption={selectedItems.find((item) => item.id === card.id)}
-              isMissingOption={selectedItems.some((item) => item.id === card.id && !item.variation)}
+              key={product.id}
+              id={product.id}
+              images={product.images}
+              title={product.name}
+              alt={product.alt}
+              options={product.options}
+              isSelected={selectedItems.some((item) => item.productId === product.id)}
+              selectedOptions={selectedItems.filter((item) => item.productId === product.id)}
               onCardClick={handleCardClick}
               onOptionClick={handleOptionClick}
             />
@@ -83,7 +114,7 @@ const Products = () => {
           selectedItems={selectedItems}
           onSend={handleSend}
           onClear={handleClear}
-          itemsWithNoVariationError={itemsWithNoVariationError}
+          onQuantityChange={handleQuantityChange}
         />
       </CatalogSection>
     </>

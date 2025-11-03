@@ -12,7 +12,7 @@ import {
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Card = memo(
-  ({ id, images, title, alt, options, isSelected, selectedOption, onCardClick, onOptionClick, isMissingOption }) => {
+  ({ id, images, title, alt, options, isSelected, selectedOptions, onCardClick, onOptionClick }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const intervalRef = useRef(null);
@@ -47,13 +47,12 @@ const Card = memo(
     return (
       <ContainerCard
         $isSelected={isSelected}
-        $isMissingOption={isMissingOption}
         onClick={() => onCardClick(id)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <CarouselBox>
-          <CarouselSlider currentIndex={currentImageIndex}>
+          <CarouselSlider $currentIndex={currentImageIndex}>
             {images.map((src, i) => (
               <CarouselImg key={i} src={src} alt={`${alt} ${i + 1}`} loading="lazy" />
             ))}
@@ -75,7 +74,7 @@ const Card = memo(
             {options.map((option) => (
               <OptionButton
                 key={option.label}
-                $isSelected={selectedOption?.label === option.label}
+                $isSelected={selectedOptions.some((selOpt) => selOpt.variation === option.label)}
                 onClick={(e) => handleOptionClick(e, option)}
               >
                 {option.label}
@@ -98,14 +97,16 @@ Card.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
   isSelected: PropTypes.bool.isRequired,
-  selectedOption: PropTypes.shape({
-    label: PropTypes.string,
-  }),
+  selectedOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      variation: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   onCardClick: PropTypes.func.isRequired,
   onOptionClick: PropTypes.func.isRequired,
-  isMissingOption: PropTypes.bool.isRequired,
 };
+
 export default Card;

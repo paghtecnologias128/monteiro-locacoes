@@ -33,14 +33,30 @@ export const Chip = styled.div`
   gap: 0.5rem;
 `;
 
+export const QuantityInput = styled.input`
+  width: 50px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+`;
+
 export const Form = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   align-items: flex-start;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
+`;
+
+export const InputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 `;
 
 export const Input = styled.input`
@@ -62,9 +78,12 @@ export const TextArea = styled.textarea`
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid ${({ $isInvalid }) => ($isInvalid ? 'var(--color-red)' : '#ccc')};
-  height: 40px;
+  min-height: 40px;
+  height: auto;
   font-family: inherit;
   font-size: 1rem;
+  overflow: hidden;
+  resize: vertical;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -138,4 +157,14 @@ export const EmptyStateMessage = styled.p`
   border: 1px dashed #ccc;
   border-radius: 8px;
   margin-top: 1rem;
+`;
+
+export const ConfirmationMessage = styled.div`
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
 `;

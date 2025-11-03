@@ -27,7 +27,7 @@ export const CarouselSlider = styled.div`
   display: flex;
   height: 100%;
   transition: transform 0.5s ease-in-out;
-  transform: ${({ currentIndex }) => `translateX(-${currentIndex * 100}%)`};
+  transform: ${({ $currentIndex }) => `translateX(-${$currentIndex * 100}%)`};
 `;
 
 export const CarouselImg = styled.img`
