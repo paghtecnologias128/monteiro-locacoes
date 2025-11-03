@@ -1,4 +1,4 @@
-import{d as a,j as e,b as i,c as s,e as l}from"./index-V-tyYJDk.js";const c=a.footer`
+import{d as a,j as e,b as i,c as s,e as l}from"./index-CxFhkLJm.js";const c=a.footer`
   background-color: var(--color-footer-background);
   color: var(--color-white);
   padding: 2rem 4rem;
