@@ -5,8 +5,8 @@ import { FaPhone } from 'react-icons/fa6';
 
 const HeroSection = () => {
   return (
-    <Background>
-      <Title>
+    <Background role="region" aria-labelledby="hero-title">
+      <Title id="hero-title">
         Transforme sua festa em <br />
         um parque de diversão!
       </Title>

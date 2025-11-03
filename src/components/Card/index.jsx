@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, memo } from 'react';
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 import {
   ContainerCard,
@@ -10,38 +10,27 @@ import {
   OptionButton,
 } from './style.js';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import useCarousel from '../..//hooks/useCarousel.js';
 
 const Card = memo(
-  ({ id, images, title, alt, options, isSelected, selectedOptions, onCardClick, onOptionClick }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isHovered, setIsHovered] = useState(false);
-    const intervalRef = useRef(null);
-
-    useEffect(() => {
-      if (isHovered) {
-        intervalRef.current = setInterval(() => {
-          setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3500);
-      } else {
-        clearInterval(intervalRef.current);
-      }
-
-      return () => clearInterval(intervalRef.current);
-    }, [isHovered, images.length]);
+  ({
+    id,
+    images,
+    title,
+    alt,
+    options,
+    isSelected,
+    selectedOptions,
+    onCardClick,
+    onOptionClick,
+  }) => {
+    const { currentImageIndex, handleNextImage, handlePrevImage, setIsHovered } = useCarousel(
+      images.length,
+    );
 
     const handleOptionClick = (e, option) => {
       e.stopPropagation();
       onOptionClick(id, option);
-    };
-
-    const handleNextImage = (e) => {
-      e.stopPropagation();
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const handlePrevImage = (e) => {
-      e.stopPropagation();
-      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
     return (
@@ -50,6 +39,9 @@ const Card = memo(
         onClick={() => onCardClick(id)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        role="button"
+        tabIndex="0"
+        aria-label={`Selecionar ${title}`}
       >
         <CarouselBox>
           <CarouselSlider $currentIndex={currentImageIndex}>
@@ -59,10 +51,10 @@ const Card = memo(
           </CarouselSlider>
           {images.length > 1 && (
             <>
-              <CarouselButton direction="prev" onClick={handlePrevImage}>
+              <CarouselButton direction="prev" onClick={handlePrevImage} aria-label="Imagem anterior">
                 <FaChevronLeft />
               </CarouselButton>
-              <CarouselButton direction="next" onClick={handleNextImage}>
+              <CarouselButton direction="next" onClick={handleNextImage} aria-label="Próxima imagem">
                 <FaChevronRight />
               </CarouselButton>
             </>
@@ -70,12 +62,14 @@ const Card = memo(
         </CarouselBox>
         <h2>{title}</h2>
         {isSelected && (
-          <OptionsContainer>
+          <OptionsContainer role="group" aria-label={`Opções para ${title}`}>
             {options.map((option) => (
               <OptionButton
                 key={option.label}
                 $isSelected={selectedOptions.some((selOpt) => selOpt.variation === option.label)}
                 onClick={(e) => handleOptionClick(e, option)}
+                aria-pressed={selectedOptions.some((selOpt) => selOpt.variation === option.label)}
+                aria-label={option.label}
               >
                 {option.label}
               </OptionButton>
@@ -97,13 +91,13 @@ Card.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
   isSelected: PropTypes.bool.isRequired,
   selectedOptions: PropTypes.arrayOf(
     PropTypes.shape({
       variation: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
   onCardClick: PropTypes.func.isRequired,
   onOptionClick: PropTypes.func.isRequired,

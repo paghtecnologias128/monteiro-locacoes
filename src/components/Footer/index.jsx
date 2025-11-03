@@ -5,7 +5,7 @@ import { FaPhone } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer role="contentinfo">
       <FooterContent>
         <Column>
           <h3>QUEM SOMOS?</h3>

@@ -5,6 +5,11 @@ A landing page moderna e responsiva para a Monteiro Locações, construída com 
 ## 🚀 Funcionalidades
 
 - **Design Moderno e Responsivo**: Adapta-se perfeitamente a qualquer tamanho de tela (desktop, tablet, mobile).
+- **Seleção de Produtos Avançada**: Permite selecionar múltiplos itens com diferentes variações e ajustar a quantidade desejada para cada um.
+- **Validação de Endereço Robusta**: Integração com ViaCEP para preenchimento automático e validação de endereços brasileiros.
+- **Campos de Formulário Inteligentes**: Campos de texto (Observações e Local do Evento) com redimensionamento automático conforme o conteúdo.
+- **Feedback Visual Intuitivo**: Mensagens de erro inline e confirmação de envio para o WhatsApp, além de destaque visual para cards com opções pendentes.
+- **Carrossel de Imagens Interativo**: Carrossel de imagens nos cards com auto-play ao passar o mouse e transição suave.
 - **Animações de Scroll**: Efeitos de surgimento suave para as seções ao rolar a página, utilizando `framer-motion`.
 - **Otimização SEO**: Títulos, meta-descrições e `alt` tags para melhor ranqueamento em motores de busca.
 - **Acessibilidade**: Implementação de `aria-labels` e semântica HTML para uma navegação inclusiva.
@@ -16,12 +21,15 @@ A landing page moderna e responsiva para a Monteiro Locações, construída com 
 
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
 - **Styled-Components**: Para estilização de componentes com CSS-in-JS.
+- **Prop-Types**: Para validação de tipos das propriedades dos componentes, garantindo maior robustez.
+- **Custom Hooks**: `useCarousel` para lógica de carrossel e `useBookingForm` para gerenciamento de formulários, promovendo reusabilidade e organização.
 - **Framer Motion**: Biblioteca para animações fluidas e declarativas.
 - **React Intersection Observer**: Para detectar a visibilidade de elementos na viewport.
 - **React Icons**: Biblioteca de ícones populares.
 - **Vite**: Ferramenta de build rápido para projetos web.
 - **ESLint**: Linter para identificar e reportar padrões problemáticos no código.
 - **Prettier**: Formatador de código para manter a consistência.
+- **ViaCEP API**: Para validação e preenchimento automático de endereços brasileiros.
 
 ## 🎨 Paleta de Cores
 
@@ -100,11 +108,14 @@ monteiro-locacoes/
 │   ├── components/         # Componentes React reutilizáveis
 │   │   ├── AgendarSection/
 │   │   ├── Card/
+│   │   ├── Chip/
 │   │   ├── ErrorBoundary/
 │   │   ├── Footer/
 │   │   ├── HeroSection/
+│   │   ├── InputGroup/
 │   │   ├── Produtos/
 │   │   └── ScrollAnimation/
+│   ├── hooks/              # Custom Hooks para lógica reutilizável
 │   ├── styles/             # Estilos globais
 │   ├── App.jsx             # Componente principal da aplicação
 │   └── main.jsx            # Ponto de entrada da aplicação

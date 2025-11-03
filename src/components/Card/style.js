@@ -42,7 +42,7 @@ export const CarouselButton = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 0.8rem;
@@ -52,10 +52,10 @@ export const CarouselButton = styled.button`
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease, opacity 0.2s ease;
-  opacity: 0.7;
+  opacity: 0.9;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 1;
   }
 

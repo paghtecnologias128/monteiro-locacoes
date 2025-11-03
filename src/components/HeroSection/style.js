@@ -95,6 +95,7 @@ export const ContactButton = styled.a`
       $isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)'};
     border-color: ${({ $isWhatsapp }) =>
       $isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)'};
+    color: var(--color-dark-background);
     transform: scale(1.05);
   }
 
