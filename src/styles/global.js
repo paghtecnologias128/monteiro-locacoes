@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-text: #333333;
     --color-green: #25D366;
     --color-yellow-lima: #fde910;
+    --color-red: #dc3545;
 
     /* Fontes */
     --font-display: 'Bungee Inline', sans-serif;

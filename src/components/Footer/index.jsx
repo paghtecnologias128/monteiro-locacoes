@@ -9,7 +9,10 @@ const Footer = () => {
       <FooterContent>
         <Column>
           <h3>QUEM SOMOS?</h3>
-          <p>Oferecemos brinquedos seguros e de alta qualidade para festas, garantindo a diversão das crianças e a tranquilidade dos pais.</p>
+          <p>
+            Oferecemos brinquedos seguros e de alta qualidade para festas, garantindo a diversão das
+            crianças e a tranquilidade dos pais.
+          </p>
         </Column>
         <LogoColumn>
           <img src={Logo} alt="Monteiro Locações Logo" />

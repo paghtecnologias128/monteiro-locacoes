@@ -3,11 +3,15 @@ export const items = [
     id: 'piscinas-e-barracas',
     name: 'Piscinas e Barracas',
     images: [
-      new URL('../assets/ball_pit.png', import.meta.url).href,
+      new URL('../assets/ball_pit.jpg', import.meta.url).href,
       new URL('../assets/ball_tent.jpg', import.meta.url).href,
     ],
     alt: 'Piscinas e Barracas',
-    options: [{ label: '1x1m' }, { label: '2x2m' }, { label: '5x1m' }],
+    options: [
+      { label: 'Piscina - 1x1m' },
+      { label: 'Piscina - 2x2m' },
+      { label: 'Barraca - 5x1m' },
+    ],
   },
   {
     id: 'pula-pula',
@@ -65,21 +69,32 @@ export const items = [
   {
     id: 'jogos-de-mesa',
     name: 'Jogos de Mesa',
-    images: [new URL('../assets/bouncy_castle.jpg', import.meta.url).href],
+    images: [
+      new URL('../assets/arcade.jpg', import.meta.url).href,
+      new URL('../assets/ping_pong_table.jpg', import.meta.url).href,
+      new URL('../assets/pool_table.jpg', import.meta.url).href,
+    ],
     alt: 'Jogos de Mesa',
     options: [{ label: 'Fliperama' }, { label: 'Mesa de Sinuca' }, { label: 'Mesa de Ping Pong' }],
   },
   {
     id: 'carrinhos-e-barracas',
     name: 'Carrinhos e Barracas',
-    images: [new URL('../assets/ball_tent.jpg', import.meta.url).href],
+    images: [
+      new URL('../assets/popcorn_cotton_candy_cart.jpg', import.meta.url).href,
+      new URL('../assets/popsicle_cart.jpg', import.meta.url).href,
+    ],
     alt: 'Carrinhos e Barracas',
     options: [{ label: 'Algodão Doce' }, { label: 'Pipoca' }, { label: 'Picolé' }],
   },
   {
     id: 'servicos',
     name: 'Serviços',
-    images: [new URL('../assets/face_painting.jpg', import.meta.url).href],
+    images: [
+      new URL('../assets/face_painting.jpg', import.meta.url).href,
+      new URL('../assets/monitor.jpg', import.meta.url).href,
+      new URL('../assets/animator.jpg', import.meta.url).href,
+    ],
     alt: 'Serviços',
     options: [
       { label: 'Pintura Facial' },

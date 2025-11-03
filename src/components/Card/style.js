@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const ContainerCard = styled.div`
   background-color: #fff;
-  border: 2px solid #37b1f8;
+  border: 2px solid ${({ $isMissingOption }) => ($isMissingOption ? 'var(--color-red)' : '#37b1f8')};
   border-radius: 30px;
   padding: 1rem;
   text-align: center;
@@ -42,19 +42,21 @@ export const CarouselButton = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 0.8rem;
   cursor: pointer;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
   }
 
   ${({ direction }) =>

@@ -93,7 +93,8 @@ export const ContactButton = styled.a`
   &:focus-visible {
     background-color: ${({ $isWhatsapp }) =>
       $isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)'};
-    border-color: ${({ $isWhatsapp }) => ($isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)')};
+    border-color: ${({ $isWhatsapp }) =>
+      $isWhatsapp ? 'var(--color-green)' : 'var(--color-cyan)'};
     transform: scale(1.05);
   }
 

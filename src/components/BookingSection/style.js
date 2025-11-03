@@ -47,7 +47,7 @@ export const Input = styled.input`
   flex: 1;
   padding: 0.5rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid ${({ $isInvalid }) => ($isInvalid ? 'var(--color-red)' : '#ccc')};
   height: 40px;
   font-family: inherit;
   font-size: 1rem;
@@ -61,7 +61,7 @@ export const TextArea = styled.textarea`
   flex: 1;
   padding: 0.5rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid ${({ $isInvalid }) => ($isInvalid ? 'var(--color-red)' : '#ccc')};
   height: 40px;
   font-family: inherit;
   font-size: 1rem;
@@ -69,6 +69,13 @@ export const TextArea = styled.textarea`
   @media (max-width: 768px) {
     width: 100%;
   }
+`;
+
+export const ErrorMessage = styled.span`
+  color: var(--color-red);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
 `;
 
 export const ButtonContainer = styled.div`
@@ -105,6 +112,14 @@ export const Button = styled.button`
     transform: scale(1.05);
   }
 
+  &:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+  }
+
   svg {
     font-size: 1.5rem;
   }
@@ -113,4 +128,14 @@ export const Button = styled.button`
     padding: 10px 20px;
     font-size: 14px;
   }
+`;
+
+export const EmptyStateMessage = styled.p`
+  text-align: center;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  margin-top: 1rem;
 `;
